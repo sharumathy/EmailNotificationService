@@ -1,8 +1,1 @@
-curl -X POST http://localhost:8080/api/notifications/email \
-  -H "Content-Type: application/json" \
-  -d '{
-        "to": "user@example.com",
-        "subject": "Test Email",
-        "body": "This is a test email from Kafka!",
-        "html": false
-      }'
+curl -X POST http://localhost:8080/api/notifications/email -H "Content-Type: application/json" -d '{"to":"user@example.com","subject":"Test Email","body":"This is a test email from Kafka!","isHtml":false}'
