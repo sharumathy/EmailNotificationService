@@ -19,7 +19,7 @@ private final JavaMailSender mailSender;
         this.mailSender = mailSender;
     }
 
-    @KafkaListener(topics = KafkaConfig.TOPIC, groupId = "email-group")
+    @KafkaListener(topics ="${kafka.topic.email}", groupId = "${spring.kafka.consumer.group-id}", containerFactory = "emailKafkaListenerFactory")
     public void consume(EmailRequest request) throws MessagingException {
         MimeMessage message = mailSender.createMimeMessage();
         MimeMessageHelper helper = new MimeMessageHelper(message, true);

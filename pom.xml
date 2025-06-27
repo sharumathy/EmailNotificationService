@@ -32,7 +32,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-amqp</artifactId>
+			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -75,6 +75,7 @@
 	</dependencies>
 
 	<build>
+	<finalName>EmailNotifyService</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
