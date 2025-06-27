@@ -31,17 +31,3 @@ services:
       - kafka
     ports:
       - "8080:8080"
-    # No environment section needed — uses application.properties
-    # Make sure bootstrap-servers points to "kafka:9092" in your properties file
-    # OR override here with environment if using localhost fails
-
-  kafka-ui:
-    image: provectuslabs/kafka-ui:latest
-    container_name: kafka-ui
-    depends_on:
-      - kafka
-    ports:
-      - "8081:8080"
-    environment:
-      KAFKA_CLUSTERS_0_NAME: kafka-cluster
-      KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka:9092
