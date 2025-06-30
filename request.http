@@ -1,0 +1,9 @@
+POST http://localhost:8080/api/notifications/email
+Content-Type: application/json
+
+{
+    "to": "sharube7@gmail.com",
+    "subject": "Test Email",
+    "body": "Hi from Sharu",
+    "isHtml": false
+}
